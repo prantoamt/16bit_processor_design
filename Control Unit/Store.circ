@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="1"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M324,156 Q328,166 332,156" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="59" stroke="#000000" stroke-width="2" width="48" x="303" y="154"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="315" y="194">Op</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="327" y="171">Store</text>
+      <circ-port height="8" pin="70,80" width="8" x="296" y="176"/>
+      <circ-port height="10" pin="630,220" width="10" x="345" y="175"/>
+      <circ-anchor facing="east" height="6" width="6" x="347" y="177"/>
+    </appear>
+    <wire from="(290,210)" to="(540,210)"/>
+    <wire from="(290,140)" to="(290,210)"/>
+    <wire from="(480,200)" to="(540,200)"/>
+    <wire from="(330,130)" to="(330,200)"/>
+    <wire from="(160,150)" to="(250,150)"/>
+    <wire from="(510,240)" to="(540,240)"/>
+    <wire from="(160,160)" to="(220,160)"/>
+    <wire from="(140,80)" to="(140,120)"/>
+    <wire from="(330,200)" to="(450,200)"/>
+    <wire from="(590,220)" to="(630,220)"/>
+    <wire from="(250,150)" to="(250,230)"/>
+    <wire from="(220,160)" to="(220,240)"/>
+    <wire from="(160,130)" to="(330,130)"/>
+    <wire from="(250,230)" to="(540,230)"/>
+    <wire from="(70,80)" to="(140,80)"/>
+    <wire from="(160,140)" to="(290,140)"/>
+    <wire from="(220,240)" to="(480,240)"/>
+    <comp lib="0" loc="(70,80)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(480,200)" name="NOT Gate"/>
+    <comp lib="0" loc="(140,120)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="0"/>
+    </comp>
+    <comp lib="1" loc="(590,220)" name="AND Gate">
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="0" loc="(630,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(510,240)" name="NOT Gate"/>
+  </circuit>
+</project>

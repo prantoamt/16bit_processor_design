@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="incoming" val="3"/>
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="1"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M260,127 Q263,138 268,127" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="60" stroke="#000000" stroke-width="2" width="49" x="240" y="128"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="250" y="172">Op</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="265" y="141">MemRd</text>
+      <circ-port height="8" pin="70,50" width="8" x="236" y="156"/>
+      <circ-port height="10" pin="670,210" width="10" x="285" y="155"/>
+      <circ-anchor facing="east" height="6" width="6" x="287" y="157"/>
+    </appear>
+    <wire from="(300,260)" to="(300,650)"/>
+    <wire from="(490,160)" to="(550,160)"/>
+    <wire from="(70,50)" to="(130,50)"/>
+    <wire from="(500,270)" to="(550,270)"/>
+    <wire from="(310,120)" to="(310,140)"/>
+    <wire from="(300,130)" to="(300,150)"/>
+    <wire from="(550,190)" to="(590,190)"/>
+    <wire from="(550,230)" to="(590,230)"/>
+    <wire from="(280,290)" to="(390,290)"/>
+    <wire from="(550,160)" to="(550,190)"/>
+    <wire from="(290,140)" to="(290,170)"/>
+    <wire from="(280,150)" to="(280,180)"/>
+    <wire from="(550,230)" to="(550,270)"/>
+    <wire from="(150,120)" to="(310,120)"/>
+    <wire from="(290,170)" to="(380,170)"/>
+    <wire from="(410,170)" to="(440,170)"/>
+    <wire from="(280,180)" to="(440,180)"/>
+    <wire from="(420,250)" to="(450,250)"/>
+    <wire from="(290,280)" to="(450,280)"/>
+    <wire from="(420,290)" to="(450,290)"/>
+    <wire from="(150,130)" to="(300,130)"/>
+    <wire from="(420,140)" to="(420,250)"/>
+    <wire from="(420,140)" to="(440,140)"/>
+    <wire from="(300,150)" to="(300,260)"/>
+    <wire from="(290,170)" to="(290,280)"/>
+    <wire from="(280,180)" to="(280,290)"/>
+    <wire from="(640,210)" to="(670,210)"/>
+    <wire from="(280,290)" to="(280,650)"/>
+    <wire from="(300,260)" to="(450,260)"/>
+    <wire from="(300,150)" to="(440,150)"/>
+    <wire from="(410,140)" to="(420,140)"/>
+    <wire from="(150,140)" to="(290,140)"/>
+    <wire from="(290,280)" to="(290,660)"/>
+    <wire from="(310,140)" to="(310,650)"/>
+    <wire from="(150,150)" to="(280,150)"/>
+    <wire from="(130,50)" to="(130,110)"/>
+    <wire from="(310,140)" to="(380,140)"/>
+    <comp lib="0" loc="(70,50)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(640,210)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(410,140)" name="NOT Gate"/>
+    <comp lib="0" loc="(670,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(500,270)" name="AND Gate">
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="1" loc="(420,290)" name="NOT Gate"/>
+    <comp lib="1" loc="(410,170)" name="NOT Gate"/>
+    <comp lib="0" loc="(130,110)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="right"/>
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="0"/>
+    </comp>
+    <comp lib="1" loc="(490,160)" name="AND Gate">
+      <a name="inputs" val="4"/>
+    </comp>
+  </circuit>
+</project>
